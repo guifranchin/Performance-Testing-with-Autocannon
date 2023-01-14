@@ -1,31 +1,17 @@
-# API Testing  #
-API de Load Teste de Aplicações
+### Performance-Testing-with-Autocanno
+Welcome to the Performance-Testing-with-Autocannon project on GitHub! This project provides a tool for testing the performance of HTTP servers.
 
-# #
--connections
-    Numero de conexões
--pipelining
-    Requisições por conexão
--duration SEC
-    Tempo de execuçao 
--amount
-    Quantidade de request feita antes de sair (caso ativado, duração é ignorada)
+# Usage
+The tool can be run with the following parameters:
+```
+-connections NUM       Number of connections to use for the test (default: 1)
+-pipelining NUM        Number of requests to send per connection (default: 1)
+-duration SEC          Total time to spend running the test (default: 10s)
+-amount NUM            Number of requests to send before quitting (overrides duration)
+```
 
+# Note
+Remember to replace the URLs in the examples with the ones you want to test.
 
-POST
-localhost/test
-{
-	"url": "localhost:3500/payments",
-	"connection": 2,
-	"amount": 10,
-	"pipelining": 1,
-	"method": "POST",
-	"authorization": "Bearer 8116f91d2be0dbbdeafc562b39a7b71f36fb0085",
-		"body": {
-		  "amount": 11.50,
-		  "document": "01234567890"
-	}
-}
-
-
-GET endpoint/test/{id}
+# Disclaimer
+Please use this tool responsibly and ensure that you have the necessary permissions before running any tests.
